@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_empty_box_sms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="'empty box'"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            android:visibility="gone"
+            android:gravity="center">
+
+        </TextView>
+
+
+        <com.tuesda.walker.circlerefresh.CircleRefreshLayout
+            app:AniBackColor="#ff8b90af"
+            app:AniForeColor="#ffffffff"
+            app:CircleSmaller="6"
+            android:id="@+id/refresh_layout_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/card_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </com.tuesda.walker.circlerefresh.CircleRefreshLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/ic_btn_add_notes"
+            app:layout_behavior="com.marcoscg.fabscrollanimations.Fade"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
