@@ -18,6 +18,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL_4 = "DATE";
     public static final String COL_5 = "TIME";
 
+    /*data base helper */
     public DataBaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
         this.getWritableDatabase();
